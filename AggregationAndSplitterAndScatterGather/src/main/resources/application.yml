@@ -1,0 +1,13 @@
+camel:
+  component:
+    servlet:
+      mapping:
+        contextPath: /*
+server:
+  port: 9090
+
+
+
+
+
+
