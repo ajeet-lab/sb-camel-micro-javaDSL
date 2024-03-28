@@ -18,9 +18,7 @@ public class ScatterAndGatherRoute extends RouteBuilder {
                 .removeHeaders("*")
                 .multicast(new HttpAggregateStretegy()).parallelProcessing()
                 .to("direct:endpoint1", "direct:endpoint2", "direct:endpoint3")
-                .end()
-                //.convertBodyTo(String.class)
-                .log("Aggregated response: ${body}");
+                .end();
 
         from("direct:endpoint1")
                 .setHeader("CamelHttpMethod", constant("GET"))

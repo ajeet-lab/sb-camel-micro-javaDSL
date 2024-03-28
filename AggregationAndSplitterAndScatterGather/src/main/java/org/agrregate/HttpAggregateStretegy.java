@@ -18,7 +18,7 @@ public class HttpAggregateStretegy implements AggregationStrategy {
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
         System.out.println("****** inside the AggregationStrategy ******");
         Object map = newExchange.getIn().getBody();
-        log.info("HttpAggregate ::: ===>  "+newExchange.getIn().getBody());
+        //log.info("HttpAggregate ::: ===>  "+newExchange.getIn().getBody());
         ArrayList<Object> list = null;
 
         // the first time we only have the new exchange
